@@ -17,12 +17,36 @@
       font-style: italic;
       font-size: 3rem;
       margin: auto;
-      margin-top: 20%;
+      color: #f2e4ce;
+      text-shadow: 2px 2px 3px black;
+    }
+
+    @media (max-width: 800px) {
+      #poem {
+        font-size: 6.5vw;
+      }
+    }
+
+    #content {
+      display: table;
+      position: absolute;
+      width: 90%;
+      height: 100%;
+      left: 5%;
+      top: 0;
+    }
+    #center {
+      display: table-cell;
+      vertical-align: middle;
     }
   </style>
 </head>
 <body>
-  <h1 id="poem"></h1>
+  <div id="content">
+    <div id="center">
+      <h1 id="poem"></h1>
+    </div>
+  </div>
   <script src='./buy_a_man_eat_fish.js'></script>
 </body>
 </html>
