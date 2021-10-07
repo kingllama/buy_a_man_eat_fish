@@ -1,8 +1,3 @@
-// Buy a man eat fish, he day, teach fish man, to a lifetime,
-// Man buy fish, day eat he. Fish man a to teach, him for a lifetime
-// Teach a man to give, and you fish him for a lifetime. Fish day man feed, and you him"
-// give a man a fish and you feed him for a day. teach a man to fish and you feed him for a lifetime
-
 Array.prototype.dedupe = function dedupe() {
   this.splice.apply(this, [0, this.length].concat(this.filter((item, index, arr) => arr.indexOf(item, index + 1) === -1)));
 }
@@ -126,3 +121,4 @@ function generate() {
 
 document.getElementById("poem").innerText = generate();
 
+console.log("Generate your own with generate() !");
