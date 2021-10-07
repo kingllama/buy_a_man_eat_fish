@@ -77,7 +77,7 @@ function generate() {
   We can use these as much as we like! */
   let fillerWords = ["a", "a", "you", $pronoun, "for", "to"]
 
-  let joiners = [" and ", ", ", ", "]
+  let joiners = [" and\xa0", ", ", ", "]
 
   let wholePoem = [];
 
@@ -117,11 +117,11 @@ function generate() {
 
   return wholePoem.map((verse) =>
     verse.map((stanza) =>
-      stanza.map((word) => typeof(word) == "string" ? word : word()).join(" ")
+      stanza.map((word) => typeof(word) == "string" ? word : word()).join(String.fromCharCode(160))
     )
     .join(joiners[randFromLength(joiners)])
     .capitalize()
-  ).join(".\n");
+  ).join(". \n");
 }
 
 document.getElementById("poem").innerText = generate();
